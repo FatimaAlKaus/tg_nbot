@@ -12,6 +12,7 @@ import (
 var _configPath = flag.String("config", "config/dev.yml", "path to the config file")
 
 func main() {
+	flag.Parse()
 	logger := logrus.New()
 	cfg, err := config.Load(*_configPath)
 	if err != nil {
